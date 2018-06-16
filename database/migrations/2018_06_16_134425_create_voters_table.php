@@ -48,8 +48,10 @@ class CreateVotersTable extends Migration
             $table->string('e_14')->nullable();
             $table->string('e_15')->nullable();
             $table->string('e_16')->nullable();
-            $table->tinyInteger('republican_vote');
-            $table->tinyInteger('democrat_vote');
+            $table->tinyInteger('republican_votes')->default(0);
+            $table->tinyInteger('democrat_votes')->default(0);
+            $table->tinyInteger('nonparty_votes')->default(0);
+            $table->tinyInteger('total_votes')->default(0);
             $table->timestamps();
         });
     }
