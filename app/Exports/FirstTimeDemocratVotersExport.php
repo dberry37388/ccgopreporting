@@ -44,6 +44,7 @@ class FirstTimeDemocratVotersExport implements FromCollection, Responsable, With
             ->whereNull('e_11')
             ->whereNull('e_13')
             ->whereNull('e_15')
+            ->orderBy('pct', 'ASC')
             ->orderBy('street_address', 'asc')
             ->orderBy('house_number', 'asc');
         
@@ -62,8 +63,7 @@ class FirstTimeDemocratVotersExport implements FromCollection, Responsable, With
             $voter->first_name,
             $voter->last_name,
             $voter->address,
-            $voter->republican_votes ?: 0,
-            $voter->democrat_votes ?: 0,
+            $voter->pct_nbr,
             $voter->e_1
         ];
     }
@@ -77,8 +77,7 @@ class FirstTimeDemocratVotersExport implements FromCollection, Responsable, With
             'FNAME',
             'LNAME',
             'ADDRESS',
-            'R',
-            'D',
+            'PCT',
             getElectionDate('e_1'),
         ];
     }
@@ -112,8 +111,8 @@ class FirstTimeDemocratVotersExport implements FromCollection, Responsable, With
                 $event->sheet->getPageSetup()->setFitToHeight(0);
                 $event->sheet->freezePane("A2");
                 $event->sheet->setAllBorders("A1:F{$this->totalRows}");
-                $event->sheet->setFirstRowBorders("A1:F1");
-                $event->sheet->alignHorizontalCenter("E1:F" . $this->totalRows);
+                $event->sheet->setFirstRowBorders("A1:E1");
+                $event->sheet->alignHorizontalCenter("E1:E" . $this->totalRows);
                 $event->sheet->alignHorizontalCenter("D1:D" . $this->totalRows);
             },
         ];
