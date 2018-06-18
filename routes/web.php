@@ -24,17 +24,17 @@ Route::get('download', 'WalkingListController@download')->name('downloadWalklist
 Route::group(['prefix' => 'lists', 'middleware' => 'auth'], function() {
     Route::get('crossovers', function() {
         return new \App\Exports\CrossoversExport();
-    });
+    })->name('crossovers');
     
     Route::get('first-time-voters', function() {
         return new \App\Exports\FirstTimeVotersExport();
-    });
+    })->name('firstTimeVoters');
     
     Route::get('first-time-republican-voters', function() {
         return new \App\Exports\FirstTimeRepublicanVotersExport();
-    });
+    })->name('firstTimeVoterRepublican');
     
     Route::get('first-time-democrat-voters', function() {
         return new \App\Exports\FirstTimeDemocratVotersExport();
-    });
+    })->name('firstTimeVoterDemocrat');
 });
