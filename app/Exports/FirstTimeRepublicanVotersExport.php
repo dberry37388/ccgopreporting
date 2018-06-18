@@ -44,6 +44,7 @@ class FirstTimeRepublicanVotersExport implements FromCollection, Responsable, Wi
             ->whereNull('e_11')
             ->whereNull('e_13')
             ->whereNull('e_15')
+            ->orderBy('pct', 'ASC')
             ->orderBy('street_address', 'asc')
             ->orderBy('house_number', 'asc');
         
