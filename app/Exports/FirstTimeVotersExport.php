@@ -44,6 +44,7 @@ class FirstTimeVotersExport implements FromCollection, Responsable, WithMapping,
             ->whereNull('e_11')
             ->whereNull('e_13')
             ->whereNull('e_15')
+            ->orderBy('pct', 'ASC')
             ->orderBy('street_address', 'asc')
             ->orderBy('house_number', 'asc');
         
@@ -62,6 +63,7 @@ class FirstTimeVotersExport implements FromCollection, Responsable, WithMapping,
             $voter->first_name,
             $voter->last_name,
             $voter->address,
+            $voter->pct_nbr,
             $voter->republican_votes ?: 0,
             $voter->democrat_votes ?: 0,
             $voter->e_1
@@ -77,6 +79,7 @@ class FirstTimeVotersExport implements FromCollection, Responsable, WithMapping,
             'FNAME',
             'LNAME',
             'ADDRESS',
+            'PCT',
             'R',
             'D',
             getElectionDate('e_1'),
@@ -111,9 +114,9 @@ class FirstTimeVotersExport implements FromCollection, Responsable, WithMapping,
                 $event->sheet->getPageSetup()->setFitToWidth(1);
                 $event->sheet->getPageSetup()->setFitToHeight(0);
                 $event->sheet->freezePane("A2");
-                $event->sheet->setAllBorders("A1:F{$this->totalRows}");
-                $event->sheet->setFirstRowBorders("A1:F1");
-                $event->sheet->alignHorizontalCenter("E1:F" . $this->totalRows);
+                $event->sheet->setAllBorders("A1:G{$this->totalRows}");
+                $event->sheet->setFirstRowBorders("A1:G1");
+                $event->sheet->alignHorizontalCenter("E1:G" . $this->totalRows);
                 $event->sheet->alignHorizontalCenter("D1:D" . $this->totalRows);
             },
         ];
