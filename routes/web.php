@@ -19,9 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('download', 'WalkingListController@download')->name('downloadWalklist');
-
 Route::group(['prefix' => 'lists', 'middleware' => 'auth'], function() {
+    
+    Route::get('walklist', function() {
+        return new \App\Exports\MasterWalkList();
+    })->name('walklist');
+    
     Route::get('crossovers', function() {
         return new \App\Exports\CrossoversExport();
     })->name('crossovers');

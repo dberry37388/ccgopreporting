@@ -4,9 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Spiritix\LadaCache\Database\LadaCacheTrait;
 
 class Voter extends Model
 {
+    use LadaCacheTrait;
+    
     /**
      * The attributes that are mass assignable.
      *
@@ -56,56 +59,22 @@ class Voter extends Model
      * @param \Illuminate\Database\Eloquent\Builder $query
      * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder
      */
-    public function scopeVotedInLastFour(Builder $query)
+    public function scopeHasVoted(Builder $query)
     {
-        return $query->whereNotNull('e_1')
-            ->whereNotNull('e_3')
-            ->whereNotNull('e_4')
-            ->whereNotNull('e_6');
+        return $query->where('total_votes', '>=', 1);
     }
     
     /**
-     * Returns array containing the voting codes that represent a democratic vote.
+     * Default order by precinct, street, house number.
      *
-     * @return array
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function getDemocratVoteCodes()
+    public function scopeDefaultOrderBy(Builder $query)
     {
-        return [
-            'YDY',
-            'NDY',
-            'YDN',
-            'NDN',
-        ];
+        return $query->orderBy('street_address', 'asc')
+            ->orderBy('house_number', 'asc')
+            ->orderBy('last_name', 'asc');
     }
     
-    /**
-     * Returns array containing the voting codes that represent a republican vote.
-     *
-     * @return array
-     */
-    public function getRepublicanVoteCodes()
-    {
-        return [
-            'YRY',
-            'NRY',
-            'YRN',
-            'NRN',
-        ];
-    }
-    
-    /**
-     * Returns array containing the voting codes that represent a non-party vote.
-     *
-     * @return array
-     */
-    public function getNonPartyVoteCodes()
-    {
-        return [
-            'YY',
-            'NY',
-            'YN',
-            'NN',
-        ];
-    }
 }

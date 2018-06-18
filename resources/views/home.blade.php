@@ -12,15 +12,31 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-striped table-hover">
+                    <p>
+                        This data was generated from the most current file available from the Election Commission. Your
+                        account should not be shared. Additional users can request access information by contacting
+                        Sally Singles. Custom reports can also be requested.
+                    </p>
+
+                    <table class="table table-hover">
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <td>Description</td>
+                                <th>Description</th>
                             </tr>
                         </thead>
 
                         <tbody>
+                            <tr>
+                                <td>
+                                    <a href="{{ route('walklist') }}">Master Walk List</a>
+                                </td>
+                                <td>
+                                    Master Walk List, containing all precincts. Current through 5/18. <br>
+                                    <span class="text-muted">This is a large file and could take longer than normal to download.</span>
+                                </td>
+                            </tr>
+
                             <tr>
                                 <td>
                                     <a href="{{ route('crossovers') }}">2018 Crossovers</a>
@@ -47,6 +63,56 @@
                                     <a href="{{ route('firstTimeVoterDemocrat') }}">First Time Voters - Democrat Only</a>
                                 </td>
                                 <td>List of first time voters who voted Democrat on 5/18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                    <h5 class="mb-3 mt-5">Understanding the Columns</h5>
+
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Column</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>LNAME</td>
+                                <td>The voter's last name</td>
+                            </tr>
+
+                            <tr>
+                                <td>ADDRESS</td>
+                                <td>The voter's current street address</td>
+                            </tr>
+
+                            <tr>
+                                <td>PCT</td>
+                                <td>The voter's precinct</td>
+                            </tr>
+
+                            <tr>
+                                <td>T</td>
+                                <td>Total time the voter has participated.</td>
+                            </tr>
+
+                            <tr>
+                                <td>%</td>
+                                <td>Percentage of times the voter has voted Republican</td>
+                            </tr>
+
+                            <tr>
+                                <td>R</td>
+                                <td>Republican</td>
+                            </tr>
+
+                            <tr>
+                                <td>D</td>
+                                <td>Democrat</td>
                             </tr>
                         </tbody>
                     </table>

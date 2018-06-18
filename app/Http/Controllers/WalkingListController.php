@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Exports\WalkingListExport;
+use App\Exports\MasterWalkList;
 
 class WalkingListController extends Controller
 {
     /**
      * Downloads the Walk List.
      *
-     * @return \App\Exports\WalkingListExport
+     * @return \App\Exports\MasterWalkList
      */
     public function download()
     {
-        return new WalkingListExport();
+        return new MasterWalkList();
     }
 }
