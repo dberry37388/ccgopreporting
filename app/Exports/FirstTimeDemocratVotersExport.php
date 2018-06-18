@@ -110,7 +110,7 @@ class FirstTimeDemocratVotersExport implements FromCollection, Responsable, With
                 $event->sheet->getPageSetup()->setFitToWidth(1);
                 $event->sheet->getPageSetup()->setFitToHeight(0);
                 $event->sheet->freezePane("A2");
-                $event->sheet->setAllBorders("A1:F{$this->totalRows}");
+                $event->sheet->setAllBorders("A1:E{$this->totalRows}");
                 $event->sheet->setFirstRowBorders("A1:E1");
                 $event->sheet->alignHorizontalCenter("E1:E" . $this->totalRows);
                 $event->sheet->alignHorizontalCenter("D1:D" . $this->totalRows);
