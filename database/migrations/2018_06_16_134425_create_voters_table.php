@@ -19,7 +19,7 @@ class CreateVotersTable extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('title')->nullable();
-            $table->string('house_number')->nullable();
+            $table->integer('house_number')->nullable();
             $table->string('street_address')->nullable();
             $table->string('address')->nullable();
             $table->string('address2')->nullable();
@@ -28,6 +28,8 @@ class CreateVotersTable extends Migration
             $table->string('zip')->nullable();
             $table->string('phone')->nullable();
             $table->string('pct_nbr')->nullable();
+            $table->integer('pct')->nullable();
+            $table->integer('pct_sub')->nullable();
             $table->string('mail')->nullable();
             $table->string('mail_city')->nullable();
             $table->string('mail_state')->nullable();

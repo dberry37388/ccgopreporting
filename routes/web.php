@@ -18,3 +18,22 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('download', 'WalkingListController@download')->name('downloadWalklist');
+
+Route::get('crossovers', function() {
+    return new \App\Exports\CrossoversExport();
+});
+
+
+Route::get('first-time-voters', function() {
+    return new \App\Exports\FirstTimeVotersExport();
+});
+
+Route::get('first-time-republican-voters', function() {
+    return new \App\Exports\FirstTimeRepublicanVotersExport();
+});
+
+Route::get('first-time-democrat-voters', function() {
+    return new \App\Exports\FirstTimeDemocratVotersExport();
+});
