@@ -66,7 +66,7 @@ class FirstTimeVotersExport implements FromCollection, Responsable, WithMapping,
             $voter->pct_nbr,
             $voter->republican_votes ?: 0,
             $voter->democrat_votes ?: 0,
-            $voter->e_1
+            formatVotingCode($voter->e_1)
         ];
     }
     

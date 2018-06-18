@@ -64,7 +64,7 @@ class FirstTimeDemocratVotersExport implements FromCollection, Responsable, With
             $voter->last_name,
             $voter->address,
             $voter->pct_nbr,
-            $voter->e_1
+            formatVotingCode($voter->e_1)
         ];
     }
     

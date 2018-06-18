@@ -50,5 +50,20 @@ return [
             'YDN',
             'NDN',
         ]
+    ],
+    
+    'vote_map' => [
+        'YRY' => 'ER',
+        'NRY' => 'R',
+        'YRN' => 'R',
+        'NRN' => 'R',
+        'YDY' => 'ED',
+        'NDY' => 'D',
+        'YDN' => 'ED',
+        'NDN' => 'D',
+        'YY' => 'E',
+        'NY' => 'Y',
+        'YN' => 'Y',
+        'NN' => 'Y',
     ]
 ];

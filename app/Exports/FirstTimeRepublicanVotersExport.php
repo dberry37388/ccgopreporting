@@ -62,9 +62,8 @@ class FirstTimeRepublicanVotersExport implements FromCollection, Responsable, Wi
             $voter->first_name,
             $voter->last_name,
             $voter->address,
-            $voter->republican_votes ?: 0,
-            $voter->democrat_votes ?: 0,
-            $voter->e_1
+            $voter->pct_nbr,
+            formatVotingCode($voter->e_1)
         ];
     }
     
@@ -77,8 +76,7 @@ class FirstTimeRepublicanVotersExport implements FromCollection, Responsable, Wi
             'FNAME',
             'LNAME',
             'ADDRESS',
-            'R',
-            'D',
+            'PCT',
             getElectionDate('e_1'),
         ];
     }
@@ -111,9 +109,9 @@ class FirstTimeRepublicanVotersExport implements FromCollection, Responsable, Wi
                 $event->sheet->getPageSetup()->setFitToWidth(1);
                 $event->sheet->getPageSetup()->setFitToHeight(0);
                 $event->sheet->freezePane("A2");
-                $event->sheet->setAllBorders("A1:F{$this->totalRows}");
-                $event->sheet->setFirstRowBorders("A1:F1");
-                $event->sheet->alignHorizontalCenter("E1:F" . $this->totalRows);
+                $event->sheet->setAllBorders("A1:E{$this->totalRows}");
+                $event->sheet->setFirstRowBorders("A1:E1");
+                $event->sheet->alignHorizontalCenter("E1:E" . $this->totalRows);
                 $event->sheet->alignHorizontalCenter("D1:D" . $this->totalRows);
             },
         ];

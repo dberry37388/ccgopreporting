@@ -13,3 +13,7 @@ function getElectionDate($election) {
 function getVoteCode($code) {
     return config("votelist.vote_code_map.{$code}");
 }
+
+function formatVotingCode($code) {
+    return config("votelist.vote_code_map.{$code}");
+}
