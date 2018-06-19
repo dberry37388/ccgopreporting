@@ -17,3 +17,13 @@ function getVoteCode($code) {
 function formatVotingCode($code) {
     return config("votelist.vote_code_map.{$code}");
 }
+
+function getVotesByElection($election, $party, $precinct = null) {
+    $count = \App\Voter::whereIn($election, config("votelist.vote_types.{$party}"));
+    
+    if ($precinct) {
+        $count->where('pct', $precinct);
+    }
+    
+    return $count->count();
+}

@@ -1,32 +1,148 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="m-0">
-                        Available Reports
-                    </h4>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="m-0">
+                            Districts
+                        </h4>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 1</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 2</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 3</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 4</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 5</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 6</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 7</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 8</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 9</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 10</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 11</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 12</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 13</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 14</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 15</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 16</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 17</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 18</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 19</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 20</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 1) }}">District 21</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="card-body">
-                    <p>
-                        This data was generated from the most current file available from the Election Commission. Your
-                        account should not be shared. Additional users can request access information by contacting
-                        Sally Singles. Custom reports can also be requested.
-                    </p>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="m-0">
+                            Available Reports
+                        </h4>
+                    </div>
 
-                    <table class="table table-hover">
-                        <thead>
+                    <div class="card-body">
+                        <p>
+                            This data was generated from the most current file available from the Election Commission. Your
+                            account should not be shared. Additional users can request access information by contacting
+                            Sally Singles. Custom reports can also be requested.
+                        </p>
+
+                        <table class="table table-hover">
+                            <thead>
                             <tr>
                                 <th>Name</th>
                                 <th>Description</th>
                             </tr>
-                        </thead>
+                            </thead>
 
-                        <tbody>
+                            <tbody>
                             <tr>
                                 <td>
                                     <a href="{{ route('walklist') }}">Master Walk List</a>
@@ -64,22 +180,22 @@
                                 </td>
                                 <td>List of first time voters who voted Democrat on 5/18</td>
                             </tr>
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
 
 
 
-                    <h5 class="mb-3 mt-5">Understanding the Columns</h5>
+                        <h5 class="mb-3 mt-5">Understanding the Columns</h5>
 
-                    <table class="table table-borderless">
-                        <thead>
+                        <table class="table table-borderless">
+                            <thead>
                             <tr>
                                 <th>Column</th>
                                 <th>Description</th>
                             </tr>
-                        </thead>
+                            </thead>
 
-                        <tbody>
+                            <tbody>
                             <tr>
                                 <td>LNAME</td>
                                 <td>The voter's last name</td>
@@ -114,11 +230,11 @@
                                 <td>D</td>
                                 <td>Democrat</td>
                             </tr>
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

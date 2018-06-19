@@ -19,6 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('chart', 'WalkingListController@chart');
+
+Route::group(['prefix' => 'precincts'], function() {
+    Route::get('{precinct}', 'PrecinctController@show')->name('showPrecinct');
+});
+
 Route::group(['prefix' => 'lists', 'middleware' => 'auth'], function() {
     
     Route::get('walklist', function() {

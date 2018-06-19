@@ -2,17 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Exports\MasterWalkList;
+use App\Voter;
 
 class WalkingListController extends Controller
 {
-    /**
-     * Downloads the Walk List.
-     *
-     * @return \App\Exports\MasterWalkList
-     */
-    public function download()
+    public function chart()
     {
-        return new MasterWalkList();
+        $republicanTotals = [];
+        $democratTotals = [];
+        
+        foreach (array_keys(config('votelist.elections')) as $election) {
+            array_push($republicanTotals, $this->getVotesByElection($election, 'republican'));
+        }
+    
+        foreach (array_keys(config('votelist.elections')) as $election) {
+            array_push($democratTotals, $this->getVotesByElection($election, 'democrat'));
+        }
+        
+        return view('chart', compact('republicanTotals', 'democratTotals'));
+    }
+    
+    protected function getVotesByElection($election, $party, $precinct = null)
+    {
+        return Voter::whereIn($election, config("votelist.vote_types.{$party}"))
+            ->count();
     }
 }
