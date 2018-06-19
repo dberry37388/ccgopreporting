@@ -21,59 +21,27 @@
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 2</a>
+                                        <a href="{{ route('showPrecinct', 2) }}">District 2</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 3</a>
+                                        <a href="{{ route('showPrecinct', 3) }}">District 3</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 4</a>
+                                        <a href="{{ route('showPrecinct', 4) }}">District 4</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 5</a>
+                                        <a href="{{ route('showPrecinct', 5) }}">District 5</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 6</a>
+                                        <a href="{{ route('showPrecinct', 6) }}">District 6</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 7</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="col-md-4">
-                                <ul>
-                                    <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 8</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 9</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 10</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 11</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 12</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 13</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 14</a>
+                                        <a href="{{ route('showPrecinct', 7) }}">District 7</a>
                                     </li>
                                 </ul>
                             </div>
@@ -81,27 +49,59 @@
                             <div class="col-md-4">
                                 <ul>
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 15</a>
+                                        <a href="{{ route('showPrecinct', 8) }}">District 8</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 16</a>
+                                        <a href="{{ route('showPrecinct', 9) }}">District 9</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 17</a>
+                                        <a href="{{ route('showPrecinct', 10) }}">District 10</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 18</a>
+                                        <a href="{{ route('showPrecinct', 11) }}">District 11</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 19</a>
+                                        <a href="{{ route('showPrecinct', 13) }}">District 12</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 20</a>
+                                        <a href="{{ route('showPrecinct', 14) }}">District 13</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 15) }}">District 14</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 16) }}">District 15</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 17) }}">District 16</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 18) }}">District 17</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 19) }}">District 18</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 20) }}">District 19</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('showPrecinct', 21) }}">District 20</a>
                                     </li>
 
                                     <li>
