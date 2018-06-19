@@ -72,7 +72,9 @@ class Voter extends Model
      */
     public function scopeDefaultOrderBy(Builder $query)
     {
-        return $query->orderBy('street_address', 'asc')
+        return $query
+            ->orderBy('pct', 'asc')
+            ->orderBy('street_address', 'asc')
             ->orderBy('house_number', 'asc')
             ->orderBy('last_name', 'asc');
     }

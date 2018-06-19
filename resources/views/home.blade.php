@@ -65,15 +65,15 @@
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 13) }}">District 12</a>
+                                        <a href="{{ route('showPrecinct', 12) }}">District 12</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 14) }}">District 13</a>
+                                        <a href="{{ route('showPrecinct', 13) }}">District 13</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 15) }}">District 14</a>
+                                        <a href="{{ route('showPrecinct', 14) }}">District 14</a>
                                     </li>
                                 </ul>
                             </div>
@@ -81,44 +81,41 @@
                             <div class="col-md-4">
                                 <ul>
                                     <li>
-                                        <a href="{{ route('showPrecinct', 16) }}">District 15</a>
+                                        <a href="{{ route('showPrecinct', 15) }}">District 15</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 17) }}">District 16</a>
+                                        <a href="{{ route('showPrecinct', 16) }}">District 16</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 18) }}">District 17</a>
+                                        <a href="{{ route('showPrecinct', 17) }}">District 17</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 19) }}">District 18</a>
+                                        <a href="{{ route('showPrecinct', 18) }}">District 18</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 20) }}">District 19</a>
+                                        <a href="{{ route('showPrecinct', 19) }}">District 19</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 21) }}">District 20</a>
+                                        <a href="{{ route('showPrecinct', 20) }}">District 20</a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('showPrecinct', 1) }}">District 21</a>
+                                        <a href="{{ route('showPrecinct', 21) }}">District 21</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-4">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
